@@ -3,6 +3,7 @@ name: build blockscout image
 on:
   push:
     branches:
+      - "main"
       - "master"
       - "production"
       - "dev"
