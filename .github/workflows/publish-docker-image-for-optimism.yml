@@ -12,7 +12,7 @@ on:
   workflow_call:
 
 env:
-  IMAGE_NAME: gcr.io/blockscout-backend-test
+  IMAGE_NAME: gcr.io/blockscout-backend-test-optimism
 
 jobs:
   container:
@@ -36,7 +36,7 @@ jobs:
           install: true
 
       - name: set-env
-        if: ${{ github.ref == 'refs/heads/master' }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         run: |
           echo "REGISTRY=us-docker.pkg.dev/exfac-staging" >> $GITHUB_ENV
 
