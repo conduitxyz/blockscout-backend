@@ -44,7 +44,7 @@ jobs:
         name: "Authenticate to Google Cloud"
         uses: "google-github-actions/auth@v0"
         with:
-          credentials_json: ${{ github.ref == 'refs/heads/production' && secrets.DEPLOYER_SERVICE_ACCOUNT_KEY || github.ref == 'refs/heads/master' &&  secrets.STAGING_DEPLOYER_SERVICE_ACCOUNT_KEY || github.ref == 'refs/heads/dev' && secrets.DEV_DEPLOYER_SERVICE_ACCOUNT_KEY }}
+          credentials_json: ${{ github.ref == 'refs/heads/production' && secrets.DEPLOYER_SERVICE_ACCOUNT_KEY || github.ref == 'refs/heads/main' &&  secrets.STAGING_DEPLOYER_SERVICE_ACCOUNT_KEY || github.ref == 'refs/heads/dev' && secrets.DEV_DEPLOYER_SERVICE_ACCOUNT_KEY }}
 
       - name: Authenticate docker
         run: |
