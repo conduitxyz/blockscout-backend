@@ -12,7 +12,7 @@ on:
   workflow_call:
 
 env:
-  IMAGE_NAME: gcr.io/blockscout-backend-test-optimism
+  IMAGE_NAME: gcr.io/blockscout-backend-test
 
 jobs:
   container:
